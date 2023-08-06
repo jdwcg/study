@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex</title>
+  </head>
+  <body>
+    <script>
+      function foo() {
+        this.age = 23;
+        this.score = 20;
+      }
+
+      foo.prototype.name = "jo";
+
+      let result = new foo();
+
+      console.log(result);
+      console.log(foo.name);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="">롯데카드</label><input id="ea1" type="number" /><br />
+      <label for="">삼성카드</label><input id="ea2" type="number" /><br />
+      <label for="">학원비</label><input id="ea3" type="number" /><br />
+      <input type="submit" value="결과" onclick="getval(event)" />
+      <div id="result_val">:</div>
+    </form>
+    <script>
+      let ea1 = document.getElementById("ea1");
+      let ea2 = document.getElementById("ea2");
+      let ea3 = document.getElementById("ea3");
+      let resultVal = document.getElementById("result_val");
+
+      function getval() {
+        event.preventDefault();
+        var valueSum =
+          parseFloat(ea1.value) + parseFloat(ea2.value) + parseFloat(ea3.value);
+
+        let result =
+          valueSum > 10000 ? valueSum - 10000 + "원 초과했음" : "관리잘했음";
+
+        resultVal.innerHTML = result;
+      }
+    </script>
+  </body>
+</html>
