@@ -3,9 +3,6 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,4 +21,20 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.foo {
+  width: 0;
+  height: 26px;
+}
+.foo:after {
+  content: "";
+  display: block;
+  background-image: url(https://pm.pstatic.net/resources/asset/sp_main.e43f76ed.png);
+  background-size: 424px 409px;
+  background-position: -364px -54px;
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 26px;
+  position: relative;
 }
